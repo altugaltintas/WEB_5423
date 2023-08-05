@@ -1,0 +1,25 @@
+﻿@model Movie
+
+
+<div class="card col-md-8 offset-2">
+    <div class="card-body">
+    <h5 class="card-title">Filmin adı: @Model.Name</h5> 
+    <p class="card-text">Yönetmenin adı : <a asp-action="Detail" asp-controller="Director" asp-route-id="@Model.DirectorId">@Model.Director.FirtsName</a></p>
+    
+    <p class="card-text">Filmin Çıkış Tarihi :@Model.PublishDate.ToShortDateString()</p>
+    </div>
+
+
+
+    <ul class="list-group list-group-flush">
+
+        @foreach (var item in Model.MovieActors)
+        {
+            <li class="list-group-item">
+                <a asp-controller="Actor" asp-action="Detail" asp-route-id="@item.ActorId">@item.Actor.FullName</a>
+            </li>
+        }
+    </ul>
+    
+
+</div>

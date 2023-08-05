@@ -1,0 +1,29 @@
+﻿
+
+
+@model CreateProductVM
+
+
+<form method="post">
+    <div class="form-group">
+        <label>ÜRÜN  AD :</label>
+        <input type="text" class="col-md-5" asp-for="Product.Name" placeholder="ürün adı yazınız." />
+    </div>
+    <div class="form-group">
+        <label>ÜRÜN STOK :</label>
+        <input type="text" class="col-md-5" asp-for="Product.Stock" placeholder="stok yazınız." />
+    </div>
+    <div class="form-group">
+        <label>KATEGORİ : </label>
+        <select class="form-control" asp-for="Product.CategoryId" asp-items="Model.Categories"></select>
+    </div>
+    <div class="form-group">
+        <label>TEDARİKÇİ : </label>
+        <select class="form-control" asp-for="Product.SupplierId" asp-items="Model.Suppliers"></select>
+    </div>
+    <div class="form-group">
+        <button type="submit"  class="btn btn-success" > OLUŞTUR </button>
+    </div>
+</form>
+
+

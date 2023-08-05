@@ -1,0 +1,15 @@
+﻿
+* Modellerin oluşturulması
+
+* Modellere ait konfigurasyonlar yapılmalı
+
+* Context oluşturup - göç başlat( add-migration isim  + update-database )
+***  NOT  => gerekli paketler : Mic.EfCore.SqlServer   
+								Mic.EfCore.Tools - göç
+								Mic.EfCore.Proxies - lazy loading için
+								STARTUP da yazılan kodlar unutulmamalı.
+
+* Controollerımda kullanmak üzere Repolarımı yazabiliriz. Infrastructure klasörü => interfcae , abstract ve concrete klasörleri
+
+
+

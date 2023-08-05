@@ -1,0 +1,19 @@
+﻿
+
+<div class="row" style="background-color:olive;">
+     <p>Burası Home controller - menu action viewdır</p>
+
+</div>
+
+@section Deneme
+    {
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Menu">Menu</a>
+    </li>
+
+    }
+
+
+    <br /><hr />
+
+<partial name="~/Views/Shared/Partials/_sheredPartial.cshtml" model='new List<string>{"Pazartesi","Salı","Çarsamba","Perşembe"}'></partial>

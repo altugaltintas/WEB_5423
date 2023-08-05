@@ -1,0 +1,14 @@
+﻿
+
+* IOC (Inversion Of Control )  =>  Uygulamanın yaşam döngüsü boyunca birbirine bağlılığı az (loosely coupled ) olan nesneler oluşturmayı amaçlayan bir yazılım geliştirmeyi amaçlamasıdır.
+
+* Ortak kökenden ve soyut bir katmandan gelen sınıfların muhakkak startup içinde söyleriz.
+
+* IOC uygulamak için zaten CORE içine gömülü olan metotları kullanabileceğimiz gibi , kütüphane aracaılığıyla da bunu sağlayabiliriz.
+
+* IOC için kullanılan bazı kütphaneler : Unity - Castle Windsor - Autofac - StructureMap - Ninject ....
+
+* IOC avantajları : Kolay test edilir
+                    Gevşek bağlı (loosely coupled ) sınıf oluşumu   
+                    Farklı implemenntasyonların kolaylaşması
+                    Modüler yazılım geliştirme

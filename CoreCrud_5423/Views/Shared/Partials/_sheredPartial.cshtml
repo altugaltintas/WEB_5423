@@ -1,0 +1,27 @@
+﻿
+
+<!--
+   
+  shared klasörü altında olduğu için tüm viewlarda çağırabilirm
+
+-->
+
+
+@model List<string>
+
+
+    <h3> Burası Shared - Partials  altındaki  _sharedPartial.cshtml sayfasıdr</h3>
+
+    @if (Model!=null)
+
+{
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                @item
+            </li>
+        }
+    </ul>
+}
+    

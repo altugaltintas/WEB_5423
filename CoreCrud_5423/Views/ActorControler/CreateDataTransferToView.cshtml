@@ -1,0 +1,45 @@
+﻿
+
+
+
+<h3 Burası CreateDAtaTransferToView actionın viewıdır></h3>
+
+
+<h5> TEMP DATA</h5>
+
+
+<ul>
+    @foreach (var item in TempData["weeklist"] as List<string>)
+    {
+
+
+        <li>@item</li>
+        
+    }
+
+
+
+</ul>
+
+<h5>VİEWBAG</h5>
+
+<ul>
+    @foreach (var item in ViewBag.weeklist2)
+    {
+        <li>@item</li>
+
+    }
+
+</ul>
+
+<h5>VİEWDATA</h5>
+
+<ul>
+    @foreach (var item in ViewData["weeklist3"] as List<string>)
+    {
+        <li>@item</li>
+
+    }
+
+</ul>
+

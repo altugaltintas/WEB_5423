@@ -1,0 +1,21 @@
+﻿
+
+* PROPERTIES => launchSetting.json  : uygulamayı başlatmak için gereli tüm bilgiler, kullanıcı profilleri yer alır.
+
+* APPSETTINGS.JSON  => Tüm bağlantı dizeler (connectionString ) , uygulamayla ilgili kod sabitlerini json formatında bulduğumuz yerdir.
+
+* PROGRAM.CS => uygulamanın giriş noktasısır ana yöntemi içerir.
+
+* DEPENDENCIES => içinde gömülü iki dosya bulunur.
+                  Mic. AspNetCore.App => web le ilgili framework
+                  Mic.NetCore.App => sisteö le ilgili işlerin kapsayan framework
+
+* STARTUP.CS => uygulamada kullanılan hizmetlerin tanıtımı , ayarları , ara yazımların (middleware) eklendiği , HTTP isteklerinin yapılandırıldığı yerdir.
+
+
+* MIDDELEWARE ( ARA YAZILIM ) =>  Request(istek) - response(cevap) pipeline işlemimiizi sağlayan bir çeşit interceptor (metot çağrımları sırasında araya girerek kesişen istekleri yöneten yapı) görevi görür. Her bileşen isteğin işlem hattından geçip geçmeyeceği , kesiştiklerinde neler olacağını yönetir. STARTUP içindeki CONFIGURE metodunda çağırılır.
+
+
+* KESTREL SERVER => Asp.NetCore için tasarlanan platformlar arası çalışan ve gömülü gelen bir web sunucusudur.  Core ile gelen OpenSource(açık kaynak) , ücretsiz , CrossPlatform (farklı platformlarda çalışan )  linux , Windows ,Macos  gibi ortamlarda uygulmaayı çalışır hale getiren sunucudur.
+
+* .NetCore öncesi uygualmalar sadece Windowsta çalışıyordu fakat artık çapraz platfom çalışabiliyor Kestrel sayesinde ve Kestrel aynı zamanda bir ara yazılımdır. Uygulamayı yayınlamak için Apache, Nodejs , IIS (default) hzimetlerinden herhangi biri kullanılabilir.

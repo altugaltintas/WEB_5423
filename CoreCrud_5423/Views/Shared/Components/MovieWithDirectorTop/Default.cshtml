@@ -1,0 +1,27 @@
+﻿@model List<Director>
+
+
+
+@foreach(var item in Model)
+
+{
+  <div class="card">
+      <div class="card-body">
+          <p>Yazarın adı : @item.FullName</p>
+          <ul>
+
+              Yazarın Filmleri:
+              @foreach (var movie in item.Movies)
+                {
+                    if (movie.IsActive)
+                    {
+                        <li>@movie.Name</li>
+                    }
+                }
+          </ul>
+
+      </div>
+
+  </div>
+
+}

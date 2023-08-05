@@ -1,0 +1,37 @@
+﻿
+
+
+<!--
+
+   PARTİAL VİEW (Parca view)
+    
+   --Hangi kontroller kullanılacaksa ona ait olan bir view klasörü altına PARTİALS isimli klasör açılarak ve istendiği kadar viwe ekleyerek oluşurulabilirler
+
+   -- Genel olarak _ ile isimeldirme başlar ve Partial ifadesiyle biter
+
+   --Tüm kontrolların altındaki acitonların viewların görmesini/kullanmasını istediğimiz parça view varsa bunu SHARED klasörü altında PARTİALS klasör açarak oraya viewları eklememiz gerekir
+
+   --Partiallar yani parça viewlar  X sayfalarda açmak isteiğimz daha küçük viewlardır
+   --Model alınabilirler / alınmayabilirler.(Genel olarak model olması durumuna karşı kontrol yapılmalı)
+
+   --Layoutta herhangi bir düzenleme  gerekmez, mantık olarak kod tarafındaki metodlaştırma olarak düşünebiliriz.
+
+
+-->
+
+
+
+@model List<Director>
+
+    <div class="row" style="background-color:olive;">
+        <p>Burası _directorListPartial.cshtml</p>
+        @if (Model!=null)
+    {
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>@item.FirtsName @item.LastName</li>
+            }
+        </ul>       
+    }
+    </div>

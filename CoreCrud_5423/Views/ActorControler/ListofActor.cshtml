@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Actor>
+
+
+
+<div>
+    <a asp-action="Actor">Listeleri Düzenle</a>
+</div>
+
+
+<table class="table table-bordered">
+
+    <thead>
+        <tr>
+
+            <th scope="col"> @Html.DisplayNameFor(model => model.ID)</th>
+            <th scope="col"> @Html.DisplayNameFor(model =>model.FirtsName)</th>
+            <th scope="col"> @Html.DisplayNameFor(model =>model.LastName)</th>
+            <th scope="col"></th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelitem => item.ID)</td>
+                <td>@Html.DisplayFor(modelitem => item.FirtsName)</td>
+                <td>@Html.DisplayFor(modelitem => item.LastName)</td>
+                <td>
+
+
+                    <a class="btn btn-success" asp-controller="Actor" asp-action="Update" asp-route-id="@item.ID">Düzenle</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ID">Sil</a>
+
+                </td>
+            </tr>
+        }
+
+
+
+    </tbody>
+
+
+
+
+</table>
